@@ -1,11 +1,13 @@
 import React from 'react';
 
+import Message from './Message'
 import '../message/Message-List.css';
 
 function MessageList() {
   return (
-    <div id="message-container">
+    <div id="chat-message-list">
         MessageList
+        <Message />
     </div>
   );
 }
