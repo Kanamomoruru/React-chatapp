@@ -1,13 +1,14 @@
+
 import React from 'react';
 
-import '../conversation/New-Conversation.css';
+import './New-Conversation.css';
 
 function NewConversation() {
-  return (
-    <div id="newconversation-container">
-        NewConversation
-    </div>
-  );
+    return (
+        <div id="new-message-container">
+            <button>+</button>
+        </div>
+    );
 }
 
 export default NewConversation;

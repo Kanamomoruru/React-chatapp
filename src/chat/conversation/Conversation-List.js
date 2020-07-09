@@ -1,23 +1,22 @@
 import React from 'react';
-import ConversationItem from '../conversation//Conversation-Item'
 
+import ConversationItem from './Conversation-Item';
 import './Conversation-List.css';
 
-function ConversationList(props) {
-  const selectedConverstionIndex = 0;
-  const conversationItems = props.conversations.map((conversation, index) => {
-    return <ConversationItem 
-      key={index} 
-      isActive={index === selectedConverstionIndex}
-      conversation={conversation} />
-  });
+const ConversationList = (props) => {
+    const selectedConversationIndex = 0;
+    const conversationItems = props.conversations.map((conversation, index) => {
+        return <ConversationItem 
+            key={index}
+            isActive={index === selectedConversationIndex }
+            conversation={conversation} />;
+    });
 
-  return (
-    <div id="conversation-container">
-      {conversationItems}
-        <ConversationItem />
-    </div>
-  );
+    return (
+        <div id="conversation-list">
+            {conversationItems}
+        </div>
+    );
 }
 
 export default ConversationList;

@@ -1,13 +1,14 @@
 import React from 'react';
 
-import '../chat-title/Chat-Title.css';
+import './Chat-Title.css';
 
-function ChatTitle() {
-  return (
-    <div id="newconversation-container">
-       ChatTitle
-    </div>
-  );
+const ChatTitle = (props) => {
+    return (
+        <div id="chat-title">
+            <span>{props.selectedConversation.title}</span>
+            {/* <img src={require("../../images/icons/trash-logo.svg")} alt="Delete Conversation" /> */}
+        </div>
+    );
 }
 
 export default ChatTitle;

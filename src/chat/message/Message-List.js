@@ -1,15 +1,21 @@
 import React from 'react';
 
-import Message from './Message'
-import '../message/Message-List.css';
+import Message from './Message';
+import './Message-List.css';
 
-function MessageList() {
-  return (
-    <div id="chat-message-list">
-        MessageList
-        <Message />
-    </div>
-  );
+const MessageList = (props) => {
+    const messageItems = props.messages.map((message, index) => {
+        return <Message 
+            key={index}
+            isMyMessage={message.isMyMessage}
+            message={message} />;
+    });
+
+    return (
+        <div id="chat-message-list">
+            {messageItems}
+        </div>
+    );
 }
 
 export default MessageList;

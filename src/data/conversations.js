@@ -63,3 +63,5 @@ export const conversations = [
         latestMessageText: 'Thank you. I appreciate that.'
     }
 ];
+
+export const selectedConversation = { title: 'Daryl Duckmanton' };
