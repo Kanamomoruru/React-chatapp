@@ -4,10 +4,13 @@ import '../conversation/Conversation-Item.css';
 
 const ConversationItem = (props) => {
   return (
-    <div className="conversation active">
-       <img />
-      <div className="created-date">{props.conversation.title}</div>
-      <div className="conversation-message">{}</div>
+    <div >
+        <img src={props.conversations.imageUrl} alt={props.conversations.imageAlt} />
+        <div className="title-text">{props.conversations.title}</div>
+        <div className="created-date">{props.conversations.createdAt}</div>
+        <div className="conversation-message">
+            {props.conversations.latestMessageText}
+        </div>
     </div>
   );
 }
